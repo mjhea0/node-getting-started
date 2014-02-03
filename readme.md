@@ -31,7 +31,7 @@ For the [Node-js-Denver-Boulder Meetup](http://www.meetup.com/Node-js-Denver-Bou
 
 #### What's going on?
 
-1. `var http = require('http')` uses the HTTP server to ultimately process requests and send responses
+1. `var http = require('http')` uses the HTTP server to process requests and send subsequent responses.
 2. `http.createServer` creates the web server object.
 3. `function (request, response) {}` handles requests and serves responses.
 4. `response.writeHead(200, {'Content-Type': 'text/plain'})` sends a response header in the form of a status code along with the exact header message.
