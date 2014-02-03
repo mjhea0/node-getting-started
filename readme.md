@@ -4,7 +4,7 @@ For the [Node-js-Denver-Boulder Meetup](http://www.meetup.com/Node-js-Denver-Bou
 
 ### Setup
 
-1. Download [Node](http://nodejs.org/download/) for your platform
+1. Download [Node](http://nodejs.org/download/) for your specific platform.
 2. Create a new folder. Within that folder create a file called *app.js*. and add the following code to the file:
   ```javascript
 	var http = require('http');
