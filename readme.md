@@ -38,7 +38,7 @@ For the [Node-js-Denver-Boulder Meetup](http://www.meetup.com/Node-js-Denver-Bou
 5. `response.end('Hello, World!\n')` tells the server that all response headers as well as the body have been sent.
 6. `.listen(1137, "127.0.0.1")` accepts connections on port 1137 on URL [http://127.0.0.1](http://127.0.0.1) (or [http://localhost](http://localhost)).
 
-For more info, please consult the Node API [documentation](http://nodejs.org/api/) for more info/further explanation.
+Please consult the Node API [documentation](http://nodejs.org/api/) for more info/further explanation.
 
 ### Extended Example
 
