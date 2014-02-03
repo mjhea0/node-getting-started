@@ -42,7 +42,7 @@ For more info, please consult the Node API [documentation](http://nodejs.org/api
 
 ### Extended Example
 
-1. Update *app.js*:
+1. Open *app.js* and save it as *app2.js*, then add the following code:
   ```javascript
   // load http module and use fs to access the file system
   var http = require('http'),
@@ -63,6 +63,8 @@ For more info, please consult the Node API [documentation](http://nodejs.org/api
   console.log('Server running at http://127.0.0.1:1137/');
   ```
 
-2. Go over this line by line. See if you can figure out what's going on? Need help? Consult the Node [documentation](http://nodejs.org/api/) and/or use the "Google-it-first" algorithm. 
+3. Save and run.
+
+3. Go over this line by line. See if you can figure out what's going on? Need help? Consult the Node [documentation](http://nodejs.org/api/) and/or use the "Google-it-first" algorithm. 
 
 **Next time will touch on [Express](http://expressjs.com/)!**
