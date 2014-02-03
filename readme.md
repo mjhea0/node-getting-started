@@ -2,19 +2,22 @@
 
 For the [Node-js-Denver-Boulder Meetup](http://www.meetup.com/Node-js-Denver-Boulder/) <3 
 
-### Setup
+### Node Setup
 
-1. Download [Node](http://nodejs.org/download/) for your specific platform.
+1. Download [Node](http://nodejs.org/download/) for your specific platform. *This also install NPM*. More on this later.
 2. Create a new folder. Within that folder create a file called *app.js*. and add the following code to the file:
   ```javascript
-	var http = require('http');
+  // load http module
+  var http = require('http');
 
-	http.createServer(function (request, response) {
-	  response.writeHead(200, {'Content-Type': 'text/plain'});
-	  response.end('Hello, World!\n');
-	}).listen(1137, "127.0.0.1");
+  // configure http server
+  http.createServer(function (request, response) {
+    response.writeHead(200, {'Content-Type': 'text/plain'});
+    response.end('Hello, World!\n');
+  }).listen(1137, "127.0.0.1");
 
-	console.log('Server running at http://127.0.0.1:1137/');
+  // inform user what is happening
+  console.log('Server running at http://127.0.0.1:1137/');
 	```
 
 	Save the file.
@@ -36,3 +39,30 @@ For the [Node-js-Denver-Boulder Meetup](http://www.meetup.com/Node-js-Denver-Bou
 6. `.listen(1137, "127.0.0.1")` accepts connections on port 1137 on URL http://127.0.0.1 (or http://localhost).
 
 For more info, please consult the Node API [documentation](http://nodejs.org/api/) for more info/further explanation.
+
+### Extended Example
+
+1. Update *app.js*:
+  ```javascript
+  // load http module and use fs to access the file system
+  var http = require('http'),
+      fs = require('fs');
+
+  // configure http server
+  http.createServer(function (request, response) {
+    
+    // what's going on here?
+    fs.readFile('data.txt', function readData(err, data) {
+      response.writeHead(200, {'Content-Type': 'text/plain'});
+      response.end(data);
+    })
+    
+  }).listen(1137, "127.0.0.1");
+
+  // inform user what is happening
+  console.log('Server running at http://127.0.0.1:1137/');
+  ```
+
+2. Go over this line by line. See if you can figure out what's going on? Need help? Consult the Node [documentation](http://nodejs.org/api/) and/or use the "Google-it-first" algorithm. 
+
+**Next time will touch on [Express](http://expressjs.com/)!**
