@@ -33,12 +33,12 @@ For the [Node-js-Denver-Boulder Meetup](http://www.meetup.com/Node-js-Denver-Bou
 
 #### What's going on?
 
-1. `var http = require('http')` uses the HTTP server to process requests and send subsequent responses.
-2. `http.createServer` creates the web server object.
-3. `function (request, response) {}` handles requests and serves responses.
-4. `response.writeHead(200, {'Content-Type': 'text/plain'})` sends a response header in the form of a status code along with the exact header message.
-5. `response.end('Hello, World!\n')` tells the server that all response headers as well as the body have been sent.
-6. `.listen(1137, "127.0.0.1")` accepts connections on port 1137 on URL [http://127.0.0.1](http://127.0.0.1) (or [http://localhost](http://localhost)).
+- `var http = require('http')` uses the HTTP server to process requests and send subsequent responses.
+- `http.createServer` creates the web server object.
+- `function (request, response) {}` handles requests and serves responses.
+- `response.writeHead(200, {'Content-Type': 'text/plain'})` sends a response header in the form of a status code along with the exact header message.
+- `response.end('Hello, World!\n')` tells the server that all response headers as well as the body have been sent.
+- `.listen(1137, "127.0.0.1")` accepts connections on port 1137 on URL [http://127.0.0.1](http://127.0.0.1) (or [http://localhost](http://localhost)).
 
 Please consult the Node API [documentation](http://nodejs.org/api/) for more info/further explanation.
 
