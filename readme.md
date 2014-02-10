@@ -186,6 +186,7 @@ $ npm install -g express
   exports.index = function(req, res){
     res.render('index', {title:'AJAX Testing'});
   };
+  ```
 
   Remember: Routes have a path path (string or regexp), callback function, and a HTTP method. In the above code, we are simply adding the callback, which render the `index` view and sets a title. 
 
