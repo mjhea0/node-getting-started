@@ -1,5 +1,8 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  form#form(method='get', action='/gotcha')
+    input#input(type='text', placeholder='enter something')
+    input(type='submit')
+  br
+  #results
