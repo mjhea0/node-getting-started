@@ -134,7 +134,7 @@ $ npm install -g express
 
   ![express](https://raw.github.com/mjhea0/node-express-ajax-craigslist/master/img/welcome.png)
 
-  Congrats! You just set up Express. Now, we just need to customize it. In this case we are going to build a form for submitting random strings then displaying them beneath the form upon submission.
+  Congrats! You just set up Express. Now, we just need to customize it. In this case we are going to build a form for submitting random strings that will be displayed beneath the form upon submission.
 
 ### Server Side
 
