@@ -1,8 +1,17 @@
-extends layout
-
-block content
-  form#form(method='get', action='/gotcha')
-    input#input(type='text', placeholder='enter something')
-    input(type='submit')
-  br
-  #results
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+  .container
+    form#form(method='get', action='/gotcha', role="form")
+      input#input.form-control(type='text', placeholder='enter something')
+      br
+      input.btn.btn-default(type='submit')
+    br
+    #results
+  script(src='http://code.jquery.com/jquery-1.10.2.min.js')
+  script(src='http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js')
+  script(src='/javascripts/main.js')

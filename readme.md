@@ -181,9 +181,36 @@ $ npm install -g express
   - Next, we have routes. The actual endpoint, or path, is defined here as well as the specific HTTP method. The actual callback is handled within the "routes" folder in the *index.js* file. 
   -  Finally, we configure the HTTP server like in Part 1.
 
-2. First route
-3. Views
-4. Form
+2. Next, let's set up the first route. Open *index.js* from the "routes" folder. Update the code as follows:
+  ```javascript
+  exports.index = function(req, res){
+    res.render('index', {title:'AJAX Testing'});
+  };
+
+  Remember: Routes have a path path (string or regexp), callback function, and a HTTP method. In the above code, we are simply adding the callback, which render the `index` view and sets a title. 
+
+3. Update your *index.jade* file:
+  ```html
+  doctype html
+  html
+    head
+      title= title
+      link(rel='stylesheet', href='http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css')
+      link(rel='stylesheet', href='/stylesheets/style.css')
+    body
+    .container
+      form#form(method='get', action='/gotcha', role="form")
+        input#input.form-control(type='text', placeholder='enter something')
+        br
+        input.btn.btn-default(type='submit')
+      br
+      #results
+    script(src='http://code.jquery.com/jquery-1.10.2.min.js')
+    script(src='http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js')
+    script(src='/javascripts/main.js')
+    ```
+
+    Again, Jade is a templating language, which compiles down to HTML. If you're having trouble with the syntax, check out the online convertor [here](http://html2jade.aaron-powell.com/). 
 
 ### Client Side
 
@@ -200,6 +227,6 @@ Boom!
 
 
 
-A route consists of a path (string or regexp), callback function, and HTTP method. Our hello world example calls app.get() which represents the HTTP GET method, with the path “/”, representing our “root” page, followed by the callback function.
+
 
 .....
