@@ -77,6 +77,8 @@ Please consult the Node API [documentation](http://nodejs.org/api/) for more inf
 
 As promised, let's add Express, which is a lightweight framework for Node. Express can also be used as a command line tool to set up a project structure/boilerplate for use with, well, the Express framework.
 
+**We'll be creating an entirely new app for this tutorial.**
+
 Start by installing Express globally:
 
 ```sh
