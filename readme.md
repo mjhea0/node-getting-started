@@ -200,10 +200,10 @@ $ npm install -g express
       link(rel='stylesheet', href='/stylesheets/style.css')
     body
     .container
-      form#form(method='', action='', role="form")
+      form(method='', action='', role="form")
         input#input.form-control(type='text', placeholder='enter something')
         br
-        input.btn.btn-default(type='submit')
+        input#submit.btn.btn-default(type='submit')
       br
       #results
     script(src='http://code.jquery.com/jquery-1.10.2.min.js')
@@ -218,7 +218,7 @@ $ npm install -g express
 1. Add a *main.js* file to the "javascripts" file and add the following code to the file:
   ```javascript
   $(function() {
-    $("#form").on("click",function() {
+    $("#submit").on("click",function() {
       event.preventDefault()
       var requestData = $("#input").val();
       console.log(requestData)
@@ -242,3 +242,5 @@ $ npm install -g express
 Boom!
 
 ## Part 3
+
+Try this on your own. Create a basic number guessing game. Building on the code from the second part, update the code so that you enter a number instead of text. Create a new route that check to see if the number is equal to the right number. If the user guesses right, return "Right!"; but, if the user guesses wrong, return "Wrong. Guess again." Finally, update your *main.js* to hit the new endpoint of the route then wait for a callback.
