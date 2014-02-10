@@ -2,6 +2,8 @@
 
 For the [Node-js-Denver-Boulder Meetup](http://www.meetup.com/Node-js-Denver-Boulder/) <3 
 
+## Part 1
+
 ### Node Setup
 
 1. Download [Node](http://nodejs.org/download/) for your specific platform. *This also installs NPM*. More on this later.
@@ -68,3 +70,60 @@ Please consult the Node API [documentation](http://nodejs.org/api/) for more inf
 3. Go over this line by line. See if you can figure out what's going on? Need help? Consult the Node [documentation](http://nodejs.org/api/) and/or use the "Google-it-first" algorithm. 
 
 **Next time we'll add [Express](http://expressjs.com/) into the mix!**
+
+## Part 2
+
+As promised, let's add Express, which is a lightweight framework for Node. Express can also be used as a command line tool to set up a project structure for use with, well, the Express framework.
+
+Start by installing Express globally:
+
+```sh
+$ npm install -g express
+```
+
+### Project Setup
+
+1. Navigate to a new directory in your terminal. Now, we'll use the Express command line tool to create our project structure:
+  ```sh
+  $ express part2
+  ```
+
+  This creates a new directory called "part2" with a basic project structure.
+
+2. Before we can beginning developing, we need to install the Express dependencies:
+  ```sh
+  $ cd part2
+  $ npm install
+  ```
+
+  Your project structure should look like this:
+  ```sh
+  ├── app.js
+  ├── package.json
+  ├── public
+  │   ├── images
+  │   ├── javascripts
+  │   └── stylesheets
+  │       └── style.css
+  ├── routes
+  │   ├── index.js
+  │   └── user.js
+  └── views
+      ├── index.jade
+      └── layout.jade
+  ```
+
+3. Test out your app to ensure everything is installed:
+  ```sh
+  $ node app
+  ```
+
+  Point your browser to [http://localhost:3000/](http://localhost:3000/), and you should see:
+
+  ![express](https://raw.github.com/mjhea0/node-express-ajax-craigslist/master/img/welcome.png)
+
+  Congrats! You just set up Express.
+
+### Server Side
+
+
