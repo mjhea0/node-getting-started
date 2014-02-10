@@ -188,7 +188,7 @@ $ npm install -g express
   };
   ```
 
-  Remember: Routes have a path path (string or regexp), callback function, and a HTTP method. In the above code, we are simply adding the callback, which render the `index` view and sets a title. 
+  *Remember:* Routes have a path (string or regex), callback function, and a HTTP method. In the above code, we are simply adding the callback, which render the `index` view and sets a title. 
 
 3. Update your *index.jade* file:
   ```html
