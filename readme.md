@@ -230,15 +230,15 @@ $ npm install -g express
   Here we grab the value from the `input` upon form submission and assign it to the variable `requestData`. Then we simply append the value back to the DOM.
 
 
-2. styles
+2. We're just about done. Let's add one custom style to *style.css*:
+  ```
+  .container {
+    max-width: 500px;
+  }
 
+  Refresh the page. Test it out!
 
 
 Boom!
 
-
-
-
-
-
-.....
+## Part 3
