@@ -245,4 +245,4 @@ Boom!
 
 Try this on your own. Create a basic number guessing game. 
 
-Building on the code from the second part, update the code so that you enter a number instead of text. Create a new route that checks to see if the number is equal to the right number. If the user guesses right, return "Right!"; but, if the user guesses wrong, return "Wrong. Guess again." Finally, update your *main.js* to call the new endpoint of the route, and passing the inputted number, then wait for a callback.
+Building on the code from the second part, update the code so that you enter a number instead of text. Create a new route that checks to see if the number is equal to the right number. If the user guesses right, return "Right!"; but, if the user guesses wrong, return "Wrong. Guess again." Finally, update your *main.js* to call the new endpoint of the route - passing the inputted number - then have it wait for a callback ("Right!" or "Wrong. Guess again."), which will be appended to the DOM.
