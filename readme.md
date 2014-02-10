@@ -99,7 +99,7 @@ $ npm install -g express
   $ npm install
   ```
 
-  > Please note: The dependencies within *package.json* are generally listed by name and version. In some cases instead of a version, you'll see an `*`, while means that npm will retrieve the latest version of the dependency. 
+  > Please note: The dependencies within *package.json* are generally listed by name and version. In some cases instead of a version, you'll see an `*`, whicg means that npm will retrieve the latest version of the dependency. 
 
   Your project structure should now look like this:
   ```sh
@@ -119,12 +119,11 @@ $ npm install -g express
   ```
 
 #### What's going on?
-
-1. *app.js* includes your app configuration, middleware, and routing
-2. *package.json* holds you app's dependencies configs
-3. The "public" folder contains images, Javascript files and stylesheets
-4. The file in your "routes" folder define the app's business logic
-5. "views" contain views, templates, and partials
+  1. *app.js* includes your app configuration, middleware, and routing.
+  2. *package.json* holds you app's dependencies configs.
+  3. The "public" folder contains images, Javascript files, and stylesheets.
+  4. The file in your "routes" folder define the app's business logic.
+  5. "views" contain views, templates, and partials.
 
 
 3. Test out your app to ensure everything is installed:
