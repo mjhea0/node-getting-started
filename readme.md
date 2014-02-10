@@ -211,7 +211,7 @@ $ npm install -g express
     script(src='/javascripts/main.js')
     ```
 
-    Jade is a templating language, which compiles down to HTML. If you're having trouble with the syntax, check out the online convertor [here](http://html2jade.aaron-powell.com/). 
+    Jade is a templating language, which compiles down to HTML. It makes it easy to seperate logic from markup. If you're having trouble with the syntax, check out the online convertor [here](http://html2jade.aaron-powell.com/). Keep practicing!
 
 ### Client Side
 
