@@ -99,7 +99,7 @@ $ npm install -g express
   $ npm install
   ```
 
-  > Please note: The dependencies within *package.json* are generally listed by name and version. In some cases instead of a version, you'll see an `*`, whicg means that npm will retrieve the latest version of the dependency. 
+  > Please note: The dependencies within *package.json* are generally listed by name and version. In some cases instead of a version, you'll see an `*`, which means that npm will retrieve the latest version of the dependency. 
 
   Your project structure should now look like this:
   ```sh
@@ -177,7 +177,7 @@ $ npm install -g express
 #### What's going on?
   - First, we load our module dependencies. The app variable is the actual Express server.
   - In the second section, `app.set()` is used to tell Express that we want to use Jade templates and where to find
- our "views" folder. Meanwhile `app.use()` functinons are for middlewares, which you can read more about [here](http://expressjs.com/api.html#middleware).
+ our "views" folder. Meanwhile `app.use()` functions are for middlewares, which you can read more about [here](http://expressjs.com/api.html#middleware).
   - Next, we have routes. The actual endpoint, or path, is defined here as well as the specific HTTP method. The actual callback is handled within the "routes" folder in the *index.js* file. 
   -  Finally, we configure the HTTP server like in Part 1.
 
@@ -211,7 +211,7 @@ $ npm install -g express
     script(src='/javascripts/main.js')
     ```
 
-    Jade is a templating language, which compiles down to HTML. It makes it easy to seperate logic from markup. If you're having trouble with the syntax, check out the online convertor [here](http://html2jade.aaron-powell.com/). Keep practicing!
+    Jade is a templating language, which compiles down to HTML. It makes it easy to separate logic from markup. If you're having trouble with the syntax, check out the online convertor [here](http://html2jade.aaron-powell.com/). Keep practicing!
 
 ### Client Side
 
