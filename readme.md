@@ -119,12 +119,11 @@ $ npm install -g express
   ```
 
   #### What's going on?
-    1. *app.js* includes your app configuration, middleware, and routing.
-    2. *package.json* holds you app's dependencies configs.
-    3. The "public" folder contains images, Javascript files, and stylesheets.
-    4. The file in your "routes" folder define the app's business logic.
-    5. "views" contain views, templates, and partials.
-
+    - *app.js* includes your app configuration, middleware, and routing.
+    - *package.json* holds you app's dependencies configs.
+    - The "public" folder contains images, Javascript files, and stylesheets.
+    - The file in your "routes" folder define the app's business logic.
+    - "views" contain views, templates, and partials.
 
 3. Test out your app to ensure everything is installed:
   ```sh
