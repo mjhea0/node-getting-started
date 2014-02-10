@@ -6,7 +6,7 @@ For the [Node-js-Denver-Boulder Meetup](http://www.meetup.com/Node-js-Denver-Bou
 
 ### Node Setup
 
-1. Download [Node](http://nodejs.org/download/) for your specific platform. *This also installs NPM*. More on this later.
+1. Download [Node](http://nodejs.org/download/) for your specific platform. *This also installs [NPM](https://npmjs.org/)*. More on this later.
 2. Create a new folder. Within that folder create a file called *app.js*. and add the following code to the file:
   ```javascript
   // load http module
@@ -127,3 +127,5 @@ $ npm install -g express
 ### Server Side
 
 
+
+https://github.com/RefactorU/exercise-solutions/tree/master/node/NODE1.1-express/part2
