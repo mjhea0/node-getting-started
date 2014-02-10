@@ -73,7 +73,7 @@ Please consult the Node API [documentation](http://nodejs.org/api/) for more inf
 
 ## Part 2
 
-As promised, let's add Express, which is a lightweight framework for Node. Express can also be used as a command line tool to set up a project structure for use with, well, the Express framework.
+As promised, let's add Express, which is a lightweight framework for Node. Express can also be used as a command line tool to set up a project structure/boilerplate for use with, well, the Express framework.
 
 Start by installing Express globally:
 
@@ -83,20 +83,23 @@ $ npm install -g express
 
 ### Project Setup
 
+(work in progress)
+
 1. Navigate to a new directory in your terminal. Now, we'll use the Express command line tool to create our project structure:
   ```sh
-  $ express part2
+  $ express <new_folder>
   ```
 
-  This creates a new directory called "part2" with a basic project structure.
+  This creates a new directory called with a basic project structure.
 
-2. Before we can beginning developing, we need to install the Express dependencies:
+2. Before we can beginning developing, navigate into the folder then install the Express dependencies from the *package.json* file:
   ```sh
-  $ cd part2
   $ npm install
   ```
 
-  Your project structure should look like this:
+  > Please note: The dependencies within *package.json* are generally listed by name and version. In some cases instead of a version, you'll see an `*`, while means that npm will retrieve the latest version of the dependency. 
+
+  Your project structure should now look like this:
   ```sh
   ├── app.js
   ├── package.json
@@ -131,10 +134,73 @@ $ npm install -g express
 
   ![express](https://raw.github.com/mjhea0/node-express-ajax-craigslist/master/img/welcome.png)
 
-  Congrats! You just set up Express.
+  Congrats! You just set up Express. Now, we just need to customize it. In this case we are going to build a form for submitting random strings then displaying them beneath the form upon submission.
 
 ### Server Side
 
+1.  Update *app.js* with the following code:
 
+  ```javascript
+  // load dependencies
+  var express = require('express'),
+      routes = require('./routes'),
+      http = require('http'),
+      path = require('path');
+
+  var app = express();
+
+  // config - all environments
+  app.set('port', process.env.PORT || 3000);
+  app.set('views', path.join(__dirname, 'views'));
+  app.set('view engine', 'jade');
+  app.use(express.favicon());
+  app.use(express.logger('dev'));
+  app.use(express.json());
+  app.use(express.urlencoded());
+  app.use(express.methodOverride());
+  app.use(app.router);
+  app.use(express.static(path.join(__dirname, 'public')));
+
+  // config - development only
+  if ('development' == app.get('env')) {
+    app.use(express.errorHandler());
+  }
+
+  // routes
+  app.get('/', routes.index);
+
+  // configure http server
+  http.createServer(app).listen(app.get('port'), function(){
+    console.log('Express server listening on port ' + app.get('port'));
+  });
+  ```
+#### What's going on?
+
+1. First, we load our module dependencies. The app variable is the actual Express server.
+2. In the second section, `app.set()` is used to tell Express that we want to use Jade templates and where to find
+ our "views" folder. Meanwhile `app.use()` functinons are for middlewares, which you can read more about [here](http://expressjs.com/api.html#middleware).
+3. Next, we have routes. The actual endpoint, or path, is defined here as well as the specific HTTP method. The actual callback is handled within the "routes" folder in the *index.js* file. 
+4. Finally, we configure the HTTP server like in Part 1.
+
+2. First route
+3. Views
+4. Form
+
+### Client Side
+
+5. Javascript
+6. styles
+
+### Server Side
+
+1. Second route
+
+
+Boom!
+
+
+
+
+A route consists of a path (string or regexp), callback function, and HTTP method. Our hello world example calls app.get() which represents the HTTP GET method, with the path “/”, representing our “root” page, followed by the callback function.
 
 .....

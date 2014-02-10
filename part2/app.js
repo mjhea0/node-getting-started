@@ -1,12 +1,12 @@
 // load dependencies
 var express = require('express'),
-	routes = require('./routes'),
-	http = require('http'),
-	path = require('path');
+    routes = require('./routes'),
+    http = require('http'),
+    path = require('path');
 
 var app = express();
 
-// cong - all environments
+// config - all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
