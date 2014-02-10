@@ -231,13 +231,13 @@ $ npm install -g express
 
 
 2. We're just about done. Let's add one custom style to *style.css*:
-  ```
+  ```css
   .container {
     max-width: 500px;
   }
+  ```
 
   Refresh the page. Test it out!
-
 
 Boom!
 
