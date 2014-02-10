@@ -87,14 +87,12 @@ $ npm install -g express
 
 ### Project Setup
 
-
-
-1. Navigate to a new directory in your terminal. Now, we'll use the Express command line tool to create our project structure:
+1. Use the Express command line tool to create our project structure:
   ```sh
   $ express <new_folder>
   ```
 
-  This creates a new directory called with a basic project structure.
+  This creates a new directory with a basic project structure.
 
 2. Before we can beginning developing, navigate into the folder then install the Express dependencies from the *package.json* file:
   ```sh
