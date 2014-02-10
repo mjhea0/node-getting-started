@@ -138,7 +138,7 @@ $ npm install -g express
 
 ### Server Side
 
-1.  Update *app.js* with the following code:
+1.  Open *app.js*, then update the routes to match the following code:
 
   ```javascript
   // load dependencies
@@ -175,12 +175,11 @@ $ npm install -g express
   });
   ```
 #### What's going on?
-
-1. First, we load our module dependencies. The app variable is the actual Express server.
-2. In the second section, `app.set()` is used to tell Express that we want to use Jade templates and where to find
+  - First, we load our module dependencies. The app variable is the actual Express server.
+  - In the second section, `app.set()` is used to tell Express that we want to use Jade templates and where to find
  our "views" folder. Meanwhile `app.use()` functinons are for middlewares, which you can read more about [here](http://expressjs.com/api.html#middleware).
-3. Next, we have routes. The actual endpoint, or path, is defined here as well as the specific HTTP method. The actual callback is handled within the "routes" folder in the *index.js* file. 
-4. Finally, we configure the HTTP server like in Part 1.
+  - Next, we have routes. The actual endpoint, or path, is defined here as well as the specific HTTP method. The actual callback is handled within the "routes" folder in the *index.js* file. 
+  -  Finally, we configure the HTTP server like in Part 1.
 
 2. First route
 3. Views
