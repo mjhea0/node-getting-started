@@ -25,7 +25,6 @@ if ('development' == app.get('env')) {
 
 // routes
 app.get('/', routes.index);
-app.get('/gotcha', routes.gotcha);
 
 // configure http server
 http.createServer(app).listen(app.get('port'), function(){

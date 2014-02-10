@@ -200,7 +200,7 @@ $ npm install -g express
       link(rel='stylesheet', href='/stylesheets/style.css')
     body
     .container
-      form#form(method='get', action='/gotcha', role="form")
+      form#form(method='', action='', role="form")
         input#input.form-control(type='text', placeholder='enter something')
         br
         input.btn.btn-default(type='submit')
@@ -215,12 +215,23 @@ $ npm install -g express
 
 ### Client Side
 
-5. Javascript
-6. styles
+1. Add a *main.js* file to the "javascripts" file and add the following code to the file:
+  ```javascript
+  $(function() {
+    $("#form").on("click",function() {
+      event.preventDefault()
+      var requestData = $("#input").val();
+      console.log(requestData)
+      $('#results').html(requestData);
+    });
+  });
+  ```
 
-### Server Side
+  Here we grab the value from the `input` upon form submission and assign it to the variable `requestData`. Then we simply append the value back to the DOM.
 
-1. Second route
+
+2. styles
+
 
 
 Boom!
