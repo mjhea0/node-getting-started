@@ -92,7 +92,7 @@ $ npm install -g express
 
   This creates a new directory with a basic project structure.
 
-2. Before we can beginning developing, navigate into the folder then run the following command to load the Express dependencies from the *package.json* file:
+2. Before we can begin developing, navigate into the folder then run the following command to load the Express dependencies from the *package.json* file:
   ```sh
   $ npm install
   ```
