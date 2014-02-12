@@ -73,8 +73,6 @@ Please consult the Node API [documentation](http://nodejs.org/api/) for more inf
 
 ## Part 2
 
-(work in progress)
-
 As promised, let's add Express, which is a lightweight framework for Node. Express can also be used as a command line tool to set up a project structure/boilerplate for use with, well, the Express framework.
 
 **We'll be creating an entirely new app for this tutorial.**
@@ -99,7 +97,7 @@ $ npm install -g express
   $ npm install
   ```
 
-  > Please note: The dependencies within *package.json* are generally listed by name and version. In some cases instead of a version, you'll see an `*`, which means that npm will retrieve the latest version of the dependency. 
+  > Please note: The dependencies within *package.json* are generally listed by name and version. In some cases, instead of a version, you'll see an `*`, which means that npm will retrieve the latest version of the dependency. For more information on NPM, please check out this [link](https://www.npmjs.org/doc/json.html). 
 
   Your project structure should now look like this:
   ```sh
@@ -175,7 +173,7 @@ $ npm install -g express
   });
   ```
 #### What's going on?
-  - First, we load our module dependencies. The app variable is the actual Express server.
+  - First, we load our module dependencies. Essentially, when you structure a Node app, you use the global `require()` method to load and cache Javascript modules. The `app` variable is the actual Express server.
   - In the second section, `app.set()` is used to tell Express that we want to use Jade templates and where to find
  our "views" folder. Meanwhile `app.use()` functions are for middlewares, which you can read more about [here](http://expressjs.com/api.html#middleware).
   - Next, we have routes. The actual endpoint, or path, is defined here as well as the specific HTTP method. The actual callback is handled within the "routes" folder in the *index.js* file. 
@@ -247,6 +245,6 @@ Try this on your own. Create a basic number guessing game.
 
 Building on the code from the second part, update the code so that you enter a number instead of text. Create a new route that checks to see if the number is equal to the right number. If the user guesses right, return "Right!"; but, if the user guesses wrong, return "Wrong. Guess again." Finally, update your *main.js* to call the new endpoint of the route - passing the inputted number - then have it wait for a callback ("Right!" or "Wrong. Guess again."), which will be appended to the DOM.
 
-Need help? Check out my answe in the "part3" folder.
+Need help? Check out my answer in the "part3" folder.
 
 Cheers!
