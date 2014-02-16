@@ -73,9 +73,13 @@ Please consult the Node API [documentation](http://nodejs.org/api/) for more inf
 
 ## Part 2
 
-As promised, let's add Express, which is a lightweight framework for Node. Express can also be used as a command line tool to set up a project structure/boilerplate for use with, well, the Express framework.
-
 **We'll be creating an entirely new app for this tutorial.**
+
+As promised, let's add Express, which is a lightweight framework for Node. 
+
+There's also an Express command line tool used to set up a project structure/boilerplate for use with, well, the Express framework.
+
+Yes, that's a bit confusing. In general, when you install modules from NPM, you use `require` to add them to your project. For utilities, like the Express command line tool, you do not need to require it in your project, so this should be installed globally, accessible to all projects. Adding to the confusion, the Express module includes both the framework and the command line utility. So we install once, globally to have access to both for all projects.
 
 Start by installing Express globally:
 
