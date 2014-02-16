@@ -2,6 +2,8 @@
 
 For the [Node-js-Denver-Boulder Meetup](http://www.meetup.com/Node-js-Denver-Boulder/) <3 
 
+**You can grab the example code [here](https://github.com/mjhea0/node-getting-started).***
+
 ## Part 1
 
 ### Node Setup
